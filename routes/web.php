@@ -6,7 +6,8 @@ use App\Http\Controllers\{
     ManajemenUserController,
     ManajemenWilayahController,
     ManajemenCurahHujanController,
-    PublikController
+    PublikController,
+    ManajemenKonfigController
 };
 
 /*
@@ -33,6 +34,12 @@ Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(f
             Route::post('/update',[ManajemenUserController::class,'update'])->name('update');
             Route::post('/destroy/{user}',[ManajemenUserController::class,'destroy'])->name('destroy');
         });
+    });
+    Route::prefix('manajemen-konfig')->name('manajemen-konfig.')->group(function(){
+        Route::get('/',[ManajemenKonfigController::class,'index'])->name('index');
+        Route::post('/store',[ManajemenKonfigController::class,'store'])->name('store');
+        Route::post('/update',[ManajemenKonfigController::class,'update'])->name('update');
+        Route::post('/destroy/{konfig}',[ManajemenKonfigController::class,'destroy'])->name('destroy');
     });
     Route::prefix('manajemen-wilayah')->name('manajemen-wilayah.')->group(function(){
         Route::get('/',[ManajemenWilayahController::class,'index'])->name('index');

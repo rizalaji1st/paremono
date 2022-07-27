@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('configs', function (Blueprint $table) {
+        Schema::create('konfigs', function (Blueprint $table) {
             $table->id();
             $table->string('key')->unique();
             $table->text('value');
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('configs');
+        Schema::dropIfExists('konfigs');
     }
 };
