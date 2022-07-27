@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $superAdminRole = Role::where('nama_role', 'super_admin')->first();
-        $adminRole = Role::where('nama_role', 'admin')->first();
+        $writerRole = Role::where('nama_role', 'writer')->first();
         User::updateOrInsert(
             [
                 'email' => 'superadmin@gmail.com',
@@ -42,19 +42,19 @@ class UserSeeder extends Seeder
 
         User::updateOrInsert(
             [
-                'email' => 'admin@gmail.com',
+                'email' => 'writer@gmail.com',
             ],
             [
-                'name' => 'admin 1',
+                'name' => 'writer 1',
                 'password' => Hash::make('password')
             ]
         );
-        $admin = User::where('email', 'admin@gmail.com')->first();
+        $writer = User::where('email', 'writer@gmail.com')->first();
 
         RoleUser::updateOrInsert(
             [
-                'users_id' => $admin->id,
-                'roles_id' => $adminRole->id,
+                'users_id' => $writer->id,
+                'roles_id' => $writerRole->id,
             ],
             []
         );

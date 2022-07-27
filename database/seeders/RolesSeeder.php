@@ -20,7 +20,7 @@ class RolesSeeder extends Seeder
         );
         Role::updateOrInsert(
             ['id' => 2],
-            ['nama_role' => 'admin']
+            ['nama_role' => 'writer']
         );
     }
 }

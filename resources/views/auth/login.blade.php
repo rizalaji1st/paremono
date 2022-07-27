@@ -33,7 +33,7 @@
 				<div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
 					<!--begin::Logo-->
 					<a href="#" class="mb-12">
-						<img alt="Logo" src="{{asset('metronic/assets/media/logos/sipecuran-dark.png')}}" class="h-60px" />
+						<img alt="Logo" src="{{asset('paremono/logo/logo-dark.png')}}" class="h-60px" />
 					</a>
 					<!--end::Logo-->
 					<!--begin::Wrapper-->
@@ -44,7 +44,7 @@
 							<!--begin::Heading-->
 							<div class="text-center mb-10">
 								<!--begin::Title-->
-								<h1 class="text-dark mb-3">Login to SI-Perahu</h1>
+								<h1 class="text-dark mb-3">Login</h1>
 								<!--end::Title-->
 							</div>
 							<!--begin::Heading-->
@@ -94,7 +94,6 @@
 					<!--begin::Links-->
 					<div class="d-flex align-items-center fw-bold fs-6">
 						<a href="{{url('/')}}" class="text-muted text-hover-primary px-2">Home</a>
-						<a href="{{url('/publik/data-curah-hujan')}}" class="text-muted text-hover-primary px-2">Data Curah Hujan</a>
 					</div>
 					<!--end::Links-->
 				</div>
