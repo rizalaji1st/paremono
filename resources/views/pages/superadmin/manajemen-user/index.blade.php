@@ -94,7 +94,7 @@
                                     <td>{{$user->email}}</td>
                                     <td>
                                         @foreach ($user->roles as $role)
-                                            @if ($role->nama_role == 'admin')
+                                            @if ($role->nama_role == 'writer')
                                                 <span class="badge badge-light-primary fs-7 m-1">{{$role->nama_role}}</span>
                                             @elseif ($role->nama_role == 'super_admin')
                                                 <span class="badge badge-light-danger fs-7 m-1">{{$role->nama_role}}</span>

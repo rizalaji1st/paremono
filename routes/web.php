@@ -9,7 +9,8 @@ use App\Http\Controllers\{
     PublikController,
     ManajemenKonfigController,
     KonfigGaleriHomeController,
-    ManajemenKategoriController
+    ManajemenKategoriController,
+    ManajemenArtikelController
 };
 
 /*
@@ -54,6 +55,14 @@ Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(f
         Route::post('/store',[ManajemenKategoriController::class,'store'])->name('store');
         Route::post('/update',[ManajemenKategoriController::class,'update'])->name('update');
         Route::post('/destroy/{kategori}',[ManajemenKategoriController::class,'destroy'])->name('destroy');
+    });
+    Route::prefix('manajemen-artikel')->name('manajemen-artikel.')->group(function(){
+        Route::get('/',[ManajemenArtikelController::class,'index'])->name('index');
+        Route::get('/create',[ManajemenArtikelController::class,'create'])->name('create');
+        Route::post('/store',[ManajemenArtikelController::class,'store'])->name('store');
+        Route::get('/edit/{blog}',[ManajemenArtikelController::class,'edit'])->name('edit');
+        Route::post('/update/{blog}',[ManajemenArtikelController::class,'update'])->name('update');
+        Route::post('/destroy/{blog}',[ManajemenArtikelController::class,'destroy'])->name('destroy');
     });
     Route::prefix('manajemen-wilayah')->name('manajemen-wilayah.')->group(function(){
         Route::get('/',[ManajemenWilayahController::class,'index'])->name('index');

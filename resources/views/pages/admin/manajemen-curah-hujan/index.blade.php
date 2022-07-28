@@ -509,7 +509,7 @@
 
                             
                             // console.log(document.getElementById('kt_modal_update_curah_hujan_form'));
-                            document.getElementById('kt_modal_update_curah_hujan_form').submit()
+                            document.getElementById('kt_modal_update_curah_hujan_form').submit();
                         } else {
                             // Show popup warning. For more info check the plugin's official documentation: https://sweetalert2.github.io/
                             Swal.fire({
