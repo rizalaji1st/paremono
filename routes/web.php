@@ -8,7 +8,8 @@ use App\Http\Controllers\{
     ManajemenCurahHujanController,
     PublikController,
     ManajemenKonfigController,
-    KonfigGaleriHomeController
+    KonfigGaleriHomeController,
+    ManajemenKategoriController
 };
 
 /*
@@ -47,6 +48,12 @@ Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(f
         Route::post('/store',[KonfigGaleriHomeController::class,'store'])->name('store');
         Route::post('/update',[KonfigGaleriHomeController::class,'update'])->name('update');
         Route::post('/destroy/{konfig}',[KonfigGaleriHomeController::class,'destroy'])->name('destroy');
+    });
+    Route::prefix('manajemen-kategori')->name('manajemen-kategori.')->group(function(){
+        Route::get('/',[ManajemenKategoriController::class,'index'])->name('index');
+        Route::post('/store',[ManajemenKategoriController::class,'store'])->name('store');
+        Route::post('/update',[ManajemenKategoriController::class,'update'])->name('update');
+        Route::post('/destroy/{kategori}',[ManajemenKategoriController::class,'destroy'])->name('destroy');
     });
     Route::prefix('manajemen-wilayah')->name('manajemen-wilayah.')->group(function(){
         Route::get('/',[ManajemenWilayahController::class,'index'])->name('index');
