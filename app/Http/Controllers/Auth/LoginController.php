@@ -41,11 +41,11 @@ class LoginController extends Controller
 
     public function redirectTo(){
         if(Auth::user()->hasAnyRoles(['admin','super_admin'])){
-            $this->redirectTo = url('/admin/manajemen-curah-hujan');
+            $this->redirectTo = url('/admin/manajemen-artikel');
             return $this->redirectTo;
         }
 
-        $this->redirectTo = url('/publik/data-curah-hujan');
+        $this->redirectTo = url('/');
         return $this->redirectTo;
     }
 }
