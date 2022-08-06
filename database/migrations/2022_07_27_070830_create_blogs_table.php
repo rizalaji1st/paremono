@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('isi');
             $table->boolean('in_carousel');
+            $table->date('tanggal');
             
             $table->timestamps();
         });

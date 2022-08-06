@@ -32,6 +32,7 @@ class ManajemenArtikelController extends Controller
         
         $blog = Blog::create([
             'title' => $request['judul'],
+            'tanggal' => $request['tanggal'],
             'isi' => $request['isi'],
             'in_carousel' => intval($request['in_carousel']),
             'path_foto' => $path_file
@@ -59,6 +60,7 @@ class ManajemenArtikelController extends Controller
 
         $blog->title = $request['judul'];
         $blog->isi = $request['isi'];
+        $blog->tanggal = $request['tanggal'];
         $blog->in_carousel = intval($request['in_carousel']);
         $blog->save();
 

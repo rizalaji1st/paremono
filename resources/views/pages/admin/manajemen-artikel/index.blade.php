@@ -80,6 +80,7 @@
                             <tr class="text-start text-gray-400 fw-bolder fs-7 text-uppercase gs-0">
                                 <th class="min-w-125px">Thumbnail</th>
                                 <th class="min-w-125px">Title</th>
+                                <th class="min-w-125px">Tanggal</th>
                                 <th class="min-w-125px">Isi</th>
                                 <th class="min-w-125px">In Carousel</th>
                                 <th class="min-w-125px">Kategori</th>
@@ -96,6 +97,7 @@
                                         <img style="max-height: 200px; max-width: 200px;" src="{{Storage::temporaryUrl($blog->path_foto,now()->addMinutes(5))}}">
                                     </td>
                                     <td>{{$blog->title}}</td>
+                                    <td>{{$blog->tanggal}}</td>
                                     <td>{{mb_strimwidth($blog->isi, 0, 97, '...')}}</td>
                                     <td>
                                         @if ($blog->in_carousel)

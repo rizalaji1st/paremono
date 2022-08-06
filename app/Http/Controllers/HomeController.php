@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\{
     User,
-    Konfig
+    Konfig,
+    Blog
 };
 
 class HomeController extends Controller
@@ -17,10 +18,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $galeri1 = Konfig::where('key','galeri_home_1')->first();
-        $galeri2 = Konfig::where('key','galeri_home_2')->first();
-        $galeri3 = Konfig::where('key','galeri_home_3')->first();
-        $galeri4 = Konfig::where('key','galeri_home_4')->first();
-        return view('welcome', compact('galeri1','galeri2','galeri3','galeri4'));
+        $galeri_homes = Konfig::where('key','LIKE','galeri_home_%')->get();
+        $blogs = Blog::where('in_carousel', true)->get();
+        return view('welcome', compact('galeri_homes', 'blogs'));
     }
 }

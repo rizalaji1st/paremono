@@ -81,6 +81,19 @@
                             <input class="form-control form-control-solid" placeholder="Enter the judul" name="judul" value="{{$blog ? $blog->title : ''}}" />
                             <!--end::Input-->
                         </div>
+                        <!--end::Input group-->
+                        <!--begin::Input group-->
+                        <div class="fv-row mb-7">
+                            <!--begin::Label-->
+                            <label class="fs-6 fw-bold form-label mb-2">
+                                <span class="required">Tanggal</span>
+                                <i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-html="true" data-bs-content="tanggal is required."></i>
+                            </label>
+                            <!--end::Label-->
+                            <!--begin::Input-->
+                            <input class="form-control form-control-solid" type="date" name="tanggal" value="{{$blog ? $blog->tanggal : ''}}" />
+                            <!--end::Input-->
+                        </div>
                         <!--begin::Input group-->
                         <div class="fv-row mb-7">
                             <!--begin::Label-->
@@ -207,6 +220,13 @@
                             validators: {
                                 notEmpty: {
                                     message: 'Judul is required'
+                                }
+                            }
+                        },
+                        'tanggal': {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Tanggal is required'
                                 }
                             }
                         },

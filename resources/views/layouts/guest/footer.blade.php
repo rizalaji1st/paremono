@@ -27,28 +27,18 @@
           </div><!-- End footer links column-->
 
           <div class="col-lg-2 col-md-3 footer-links">
-          </div><!-- End footer links column-->
-
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
+            <h4>Link Terkait</h4>
             <ul>
-              <li><a href="#">Molestiae accusamus iure</a></li>
-              <li><a href="#">Excepturi dignissimos</a></li>
-              <li><a href="#">Suscipit distinctio</a></li>
-              <li><a href="#">Dilecta</a></li>
-              <li><a href="#">Sit quas consectetur</a></li>
+              <li><a href="magelangkab.go.id">Pemerintah Kab. Magelang</a></li>
+              <li><a href="dispermades.magelangkab.go.id">Dispermades Kab. Magelang</a></li>
+              <li><a href="diskominfo.magelangkab.go.id">Diskominfo Kab. Magelang</a></li>
             </ul>
           </div><!-- End footer links column-->
 
           <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
           </div><!-- End footer links column-->
 
         </div>
@@ -58,7 +48,7 @@
     <div class="footer-legal text-center position-relative">
       <div class="container">
         <div class="copyright">
-          &copy; 2020 <strong><span>Desa Paremono</span></strong>.
+          &copy; 2022 <strong><span>Desa Paremono</span></strong>.
         </div>
       </div>
     </div>

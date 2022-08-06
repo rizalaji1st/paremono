@@ -9,7 +9,9 @@ class Blog extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','isi','path_foto','in_carousel'];
+    protected $fillable = ['title','isi','path_foto','in_carousel', 'tanggal'];
+
+    protected $dates = ['tanggal'];
     
     public function kategoris()
     {
