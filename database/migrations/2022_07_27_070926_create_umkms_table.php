@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('path_foto');
             $table->string('title');
             $table->text('isi');
-            $table->string('wa');
-            $table->string('phone');
+            $table->string('wa')->nullable();
+            $table->string('phone')->nullable();
             $table->boolean('in_carousel');
 
             $table->timestamps();

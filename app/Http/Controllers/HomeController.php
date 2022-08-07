@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\{
     User,
     Konfig,
-    Blog
+    Blog,
+    Galeri
 };
 
 class HomeController extends Controller
@@ -20,6 +21,7 @@ class HomeController extends Controller
     {
         $galeri_homes = Konfig::where('key','LIKE','galeri_home_%')->get();
         $blogs = Blog::where('in_carousel', true)->get();
-        return view('welcome', compact('galeri_homes', 'blogs'));
+        $galeris = Galeri::where('in_carousel', true)->get();
+        return view('welcome', compact('galeri_homes', 'blogs', 'galeris'));
     }
 }

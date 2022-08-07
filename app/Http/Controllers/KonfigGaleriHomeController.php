@@ -13,7 +13,7 @@ use Carbon\Carbon;
 class KonfigGaleriHomeController extends Controller
 {
     public function index(){
-        $konfigs = Konfig::whereIn('key',['galeri_home_1','galeri_home_2','galeri_home_3','galeri_home_4'])->get();
+        $konfigs = Konfig::where('key','LIKE','galeri_home_%')->get();
         return view('pages.admin.konfig-galeri-home.index', compact('konfigs'));
     }
 

@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('kontaks', function (Blueprint $table) {
             $table->id();
-            $table->string('kontak');
+            $table->string('nama');
             $table->text('keterangan');
-            $table->boolean('in_wa');
-            $table->boolean('in_phone');
+            $table->string('wa')->nullable();
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }

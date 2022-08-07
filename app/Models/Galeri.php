@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Galeri extends Model
 {
     use HasFactory;
+    protected $fillable = ['nama','keterangan','path_foto','in_carousel','tanggal'];
+
+    protected $dates = ['tanggal'];
 }

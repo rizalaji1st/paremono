@@ -10,7 +10,8 @@ use App\Http\Controllers\{
     ManajemenKonfigController,
     KonfigGaleriHomeController,
     ManajemenKategoriController,
-    ManajemenArtikelController
+    ManajemenArtikelController,
+    ManajemenGaleriController
 };
 
 /*
@@ -64,11 +65,11 @@ Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(f
         Route::post('/update/{blog}',[ManajemenArtikelController::class,'update'])->name('update');
         Route::post('/destroy/{blog}',[ManajemenArtikelController::class,'destroy'])->name('destroy');
     });
-    Route::prefix('manajemen-wilayah')->name('manajemen-wilayah.')->group(function(){
-        Route::get('/',[ManajemenWilayahController::class,'index'])->name('index');
-        Route::post('/store',[ManajemenWilayahController::class,'store'])->name('store');
-        Route::post('/update',[ManajemenWilayahController::class,'update'])->name('update');
-        Route::post('/destroy/{wilayah}',[ManajemenWilayahController::class,'destroy'])->name('destroy');
+    Route::prefix('manajemen-galeri')->name('manajemen-galeri.')->group(function(){
+        Route::get('/',[ManajemenGaleriController::class,'index'])->name('index');
+        Route::post('/store',[ManajemenGaleriController::class,'store'])->name('store');
+        Route::post('/update',[ManajemenGaleriController::class,'update'])->name('update');
+        Route::post('/destroy/{galeri}',[ManajemenGaleriController::class,'destroy'])->name('destroy');
     });
     Route::prefix('manajemen-curah-hujan')->name('manajemen-curah-hujan.')->group(function(){
         Route::get('/',[ManajemenCurahHujanController::class,'index'])->name('index');
