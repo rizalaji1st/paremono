@@ -1,5 +1,6 @@
 <!-- Vendor JS Files -->
 <script src="{{ asset('upconstruction/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="{{ asset('upconstruction/assets/vendor/aos/aos.js')}}"></script>
 <script src="{{ asset('upconstruction/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
 <script src="{{ asset('upconstruction/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>

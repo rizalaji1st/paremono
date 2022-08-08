@@ -31,6 +31,8 @@ Route::name('home.')->group(function(){
     Route::get('/artikel', [HomeController::class, 'artikel'])->name('artikel');
     Route::get('/artikel-kategori/{slug}', [HomeController::class, 'artikelKategori'])->name('artikel-kategori');
     Route::get('/artikel/{slug}', [HomeController::class, 'artikelDetail'])->name('artikel-detail');
+    Route::get('/tentang', [HomeController::class, 'tentang'])->name('tentang');
+    Route::post('/tentang/masukan', [HomeController::class, 'tentangMasukan'])->name('tentangMasukan');
 });
 
 Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(function () {

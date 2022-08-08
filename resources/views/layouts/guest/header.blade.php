@@ -21,10 +21,10 @@
               @endforeach
             </ul>
           </li>
-          <li><a href="{{url('/')}}" class="@yield('galeri_active')">Galeri</a></li>
-          <li><a href="{{url('/')}}" class="@yield('umkm_active')">UMKM</a></li>
-          <li><a href="{{url('/')}}" class="@yield('kontak_active')">Kontak Penting</a></li>
-          <li><a href="{{url('/')}}" class="@yield('tentang_active')">Tentang</a></li>
+          <li><a href="{{url('/galeri')}}" class="@yield('galeri_active')">Galeri</a></li>
+          <li><a href="{{url('/umkm')}}" class="@yield('umkm_active')">UMKM</a></li>
+          <li><a href="{{url('/kontak')}}" class="@yield('kontak_active')">Kontak Penting</a></li>
+          <li><a href="{{url('/tentang')}}" class="@yield('tentang_active')">Tentang</a></li>
         </ul>
       </nav><!-- .navbar -->
 

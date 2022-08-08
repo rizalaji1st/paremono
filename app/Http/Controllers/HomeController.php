@@ -58,4 +58,16 @@ class HomeController extends Controller
 
         return view('pages.publik.artikel', compact('blogs','kategori'));
     }
+
+    public function tentang(){
+        return view('pages.publik.tentang');
+    }
+
+    public function tentangMasukan(Request $request){
+        $data = [
+            'status' => 'success'
+        ];
+
+        return response()->json($data, 200);
+    }
 }
