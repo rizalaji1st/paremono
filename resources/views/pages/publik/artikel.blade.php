@@ -12,7 +12,7 @@
         <h2>Artikel</h2>
         <ol>
           <li><a href="{{url('/')}}">Home</a></li>
-          <li>Artikel</li>
+          <li>{{$kategori ? $kategori->nama : "Artikel"}}</li>
         </ol>
 
       </div>
@@ -58,13 +58,13 @@
 
         </div><!-- End blog posts list -->
 
-        <div class="blog-pagination">
+        {{-- <div class="blog-pagination">
           <ul class="justify-content-center">
             <li><a href="#">1</a></li>
             <li class="active"><a href="#">2</a></li>
             <li><a href="#">3</a></li>
           </ul>
-        </div><!-- End blog pagination -->
+        </div><!-- End blog pagination --> --}}
 
       </div>
     </section><!-- End Blog Section -->

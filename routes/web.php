@@ -29,7 +29,7 @@ use App\Http\Controllers\{
 Route::name('home.')->group(function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
     Route::get('/artikel', [HomeController::class, 'artikel'])->name('artikel');
-    Route::get('/artikel-kategori/{kategori}', [HomeController::class, 'artikelKategori'])->name('artikel-kategori');
+    Route::get('/artikel-kategori/{slug}', [HomeController::class, 'artikelKategori'])->name('artikel-kategori');
     Route::get('/artikel/{slug}', [HomeController::class, 'artikelDetail'])->name('artikel-detail');
 });
 

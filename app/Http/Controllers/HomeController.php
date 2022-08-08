@@ -8,11 +8,19 @@ use App\Models\{
     Konfig,
     Blog,
     Galeri,
-    Kategori
+    Kategori,
+    BlogKategori
 };
+use Illuminate\Support\Facades\View;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $kategoris = Kategori::get();
+        View::share('shareKategoris', $kategoris);
+    }
+
     /**
      * Show the application dashboard.
      *
@@ -28,7 +36,8 @@ class HomeController extends Controller
 
     public function artikel(){
         $blogs = Blog::where('in_carousel', true)->get();
-        return view('pages.publik.artikel', compact('blogs'));
+        $kategori = null;
+        return view('pages.publik.artikel', compact('blogs','kategori'));
     }
 
     public function artikelDetail($slug){
@@ -40,4 +49,13 @@ class HomeController extends Controller
         return view('pages.publik.artikel-detail', compact('blog','latest_blogs', 'kategoris'));
     }
 
+    public function artikelKategori($slug){
+        $kategori = Kategori::where('nama', $slug)->first();
+        if(! $kategori) abort(404);
+        $blogKategoris = BlogKategori::where('kategoris_id',$kategori->id)->get()->pluck('id');
+
+        $blogs = Blog::whereIn('id', $blogKategoris)->get();
+
+        return view('pages.publik.artikel', compact('blogs','kategori'));
+    }
 }

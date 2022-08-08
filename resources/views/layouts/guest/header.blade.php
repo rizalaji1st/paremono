@@ -16,9 +16,9 @@
           <li><a href="{{url('/')}}" class="@yield('home_active')">Home</a></li>
           <li class="dropdown"><a href="{{url('/artikel')}}"><span>Artikel</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#">Berita Terkini</a></li>
-              <li><a href="#">Kegiatan Masyarakat</a></li>
-              <li><a href="#">Info Penting</a></li>
+              @foreach ($shareKategoris as $shareKategori)
+                <li><a href="{{ url('/artikel-kategori/'.$shareKategori->nama) }}">{{$shareKategori->nama}}</a></li>
+              @endforeach
             </ul>
           </li>
           <li><a href="{{url('/')}}" class="@yield('galeri_active')">Galeri</a></li>

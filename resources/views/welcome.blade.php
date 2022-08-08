@@ -68,7 +68,7 @@
                 <p>{{mb_strimwidth(strip_tags($blog->isi), 0, 97, '...')}}</p>
                 <hr>
   
-                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+                <a href="{{url('/artikel/'.$blog->title)}}" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
   
               </div>
   
