@@ -13,7 +13,7 @@
                 Kecamatan Mungkid <br>
                 Kabupaten Magelang<br><br>
                 <strong>Kode Pos:</strong> 56551<br>
-                <strong>Phone:</strong> (0293)3283912<br>
+                <strong>Phone:</strong> (0293) 3283912<br>
                 <strong>Email:</strong> pemdesparemono@gmail.com<br>
               </p>
               <div class="social-links d-flex mt-3">
@@ -29,9 +29,9 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Link Terkait</h4>
             <ul>
-              <li><a href="magelangkab.go.id">Pemerintah Kab. Magelang</a></li>
-              <li><a href="dispermades.magelangkab.go.id">Dispermades Kab. Magelang</a></li>
-              <li><a href="diskominfo.magelangkab.go.id">Diskominfo Kab. Magelang</a></li>
+              <li><a href="https:\\magelangkab.go.id">Pemerintah Kab. Magelang</a></li>
+              <li><a href="https:\\dispermades.magelangkab.go.id">Dispermades Kab. Magelang</a></li>
+              <li><a href="https:\\diskominfo.magelangkab.go.id">Diskominfo Kab. Magelang</a></li>
             </ul>
           </div><!-- End footer links column-->
 

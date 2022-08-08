@@ -5,7 +5,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="{{ asset('upconstruction/assets/img/logo.png')}}" alt="">
+        <img src="{{ asset('paremono/logo/logo.png')}}" alt="">
         <h1>Desa Paremono</h1>
       </a>
 
@@ -13,29 +13,18 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li><a href="{{url('/')}}" class="@yield('home_active')">Home</a></li>
+          <li class="dropdown"><a href="{{url('/artikel')}}"><span>Artikel</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
+              <li><a href="#">Berita Terkini</a></li>
+              <li><a href="#">Kegiatan Masyarakat</a></li>
+              <li><a href="#">Info Penting</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="{{url('/')}}" class="@yield('galeri_active')">Galeri</a></li>
+          <li><a href="{{url('/')}}" class="@yield('umkm_active')">UMKM</a></li>
+          <li><a href="{{url('/')}}" class="@yield('kontak_active')">Kontak Penting</a></li>
+          <li><a href="{{url('/')}}" class="@yield('tentang_active')">Tentang</a></li>
         </ul>
       </nav><!-- .navbar -->
 

@@ -11,7 +11,8 @@ use App\Http\Controllers\{
     KonfigGaleriHomeController,
     ManajemenKategoriController,
     ManajemenArtikelController,
-    ManajemenGaleriController
+    ManajemenGaleriController,
+    HomeController
 };
 
 /*
@@ -25,8 +26,11 @@ use App\Http\Controllers\{
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::name('home.')->group(function(){
+    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/artikel', [HomeController::class, 'artikel'])->name('artikel');
+    Route::get('/artikel-kategori/{kategori}', [HomeController::class, 'artikelKategori'])->name('artikel-kategori');
+    Route::get('/artikel/{slug}', [HomeController::class, 'artikelDetail'])->name('artikel-detail');
 });
 
 Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(function () {
@@ -77,16 +81,6 @@ Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(f
         Route::post('/get-data',[ManajemenCurahHujanController::class,'getData'])->name('get-data');
     });
 });
-
-
-Route::prefix('publik')->name('publik.')->group(function () {
-    Route::prefix('data-curah-hujan')->name('data-curah-hujan.')->group(function(){
-        Route::get('/',[PublikController::class,'index'])->name('index');
-        Route::post('/get-data',[PublikController::class,'getData'])->name('get-data');
-    });
-});
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 

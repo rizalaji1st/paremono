@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 
+@section('home_active','active')
+
 @section('content')
   
   <!-- ======= Hero Section ======= -->
@@ -44,34 +46,34 @@
 
       <div class="row gy-5">
         @foreach ($blogs as $blog)
-                <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                  <div class="post-item position-relative h-100">
-        
-                    <div class="post-img position-relative overflow-hidden">
-                      <img src="{{ Storage::temporaryUrl($blog->path_foto, now()->addMinutes(5))}}" class="img-fluid" alt="">
-                      <span class="post-date">{{$blog->tanggal->isoFormat('dddd, D MMMM Y')}}</span>
-                    </div>
-        
-                    <div class="post-content d-flex flex-column">
-        
-                      <h3 class="post-title">{{$blog->title}}</h3>
-        
-                      <div class="meta d-flex align-items-center">
-                        <div class="d-flex align-items-center">
-                          @foreach ($blog->kategoris as $kategori)
-                            <i class="bi bi-folder2"></i> <span class="ps-2">{{$kategori->nama}}</span>
-                          @endforeach
-                        </div>
-                      </div><br>
-                      <p>{{mb_strimwidth(strip_tags($blog->isi), 0, 97, '...')}}</p>
-                      <hr>
-        
-                      <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-        
-                    </div>
-        
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="post-item position-relative h-100">
+  
+              <div class="post-img position-relative overflow-hidden">
+                <img src="{{ Storage::temporaryUrl($blog->path_foto, now()->addMinutes(5))}}" class="img-fluid" alt="">
+                <span class="post-date">{{$blog->tanggal->isoFormat('dddd, D MMMM Y')}}</span>
+              </div>
+  
+              <div class="post-content d-flex flex-column">
+  
+                <h3 class="post-title">{{$blog->title}}</h3>
+  
+                <div class="meta d-flex align-items-center">
+                  <div class="d-flex align-items-center">
+                    @foreach ($blog->kategoris as $kategori)
+                      <i class="bi bi-folder2"></i> <span class="ps-2">{{$kategori->nama}}</span>
+                    @endforeach
                   </div>
-                </div><!-- End post item -->
+                </div><br>
+                <p>{{mb_strimwidth(strip_tags($blog->isi), 0, 97, '...')}}</p>
+                <hr>
+  
+                <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+  
+              </div>
+  
+            </div>
+          </div><!-- End post item -->
         @endforeach
 
       </div>
