@@ -33,6 +33,7 @@ Route::name('home.')->group(function(){
     Route::get('/artikel/{slug}', [HomeController::class, 'artikelDetail'])->name('artikel-detail');
     Route::get('/tentang', [HomeController::class, 'tentang'])->name('tentang');
     Route::post('/tentang/masukan', [HomeController::class, 'tentangMasukan'])->name('tentangMasukan');
+    Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
 });
 
 Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(function () {

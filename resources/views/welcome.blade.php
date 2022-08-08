@@ -98,8 +98,8 @@
                 <div class="portfolio-content h-100">
                   <img src="{{ Storage::temporaryUrl($galeri->path_foto, now()->addMinutes(5))}}" class="img-fluid" alt="">
                   <div class="portfolio-info">
-                    <h4>{{$galeri->nama}}</h4>
-                    <p>{{$galeri->tanggal->isoFormat('dddd, D MMMM Y')}}</p>
+                    <h4>{{$galeri->tanggal->isoFormat('dddd, D MMMM Y')}}</h4>
+                    <p>{{$galeri->nama}}</p>
                     <a href="{{ Storage::temporaryUrl($galeri->path_foto, now()->addMinutes(5))}}" title="{{$galeri->keterangan}}" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   </div>
                 </div>

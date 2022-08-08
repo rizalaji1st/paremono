@@ -63,6 +63,11 @@ class HomeController extends Controller
         return view('pages.publik.tentang');
     }
 
+    public function galeri(){
+        $galeris = Galeri::get();
+        return view('pages.publik.galeri', compact('galeris'));
+    }
+
     public function tentangMasukan(Request $request){
         $data = [
             'status' => 'success'
