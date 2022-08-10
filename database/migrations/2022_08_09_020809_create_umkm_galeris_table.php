@@ -13,18 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('umkms', function (Blueprint $table) {
+        Schema::create('umkm_galeris', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('umkms_id');
             $table->string('path_foto');
-            $table->string('title');
-            $table->string('nama_pemilik');
-            $table->string('alamat');
-            $table->text('isi');
-            $table->text('ringkasan');
-            $table->string('wa')->nullable();
-            $table->string('phone')->nullable();
-
             $table->timestamps();
+
+            $table->foreign('umkms_id')->references('id')->on('umkms')->onDelete('cascade');
         });
     }
 
@@ -35,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('umkms');
+        Schema::dropIfExists('umkm_galeris');
     }
 };

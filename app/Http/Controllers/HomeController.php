@@ -9,7 +9,9 @@ use App\Models\{
     Blog,
     Galeri,
     Kategori,
-    BlogKategori
+    BlogKategori,
+    Masukan,
+    Umkm
 };
 use Illuminate\Support\Facades\View;
 
@@ -69,10 +71,22 @@ class HomeController extends Controller
     }
 
     public function tentangMasukan(Request $request){
+        Masukan::create([
+            'nama' => $request['name'],
+            'email' => $request['email'],
+            'subject' => $request['subject'],
+            'message' => $request['message']
+        ]);
+
         $data = [
             'status' => 'success'
         ];
 
         return response()->json($data, 200);
+    }
+
+    public function umkm(){
+        $umkms = Umkm::get();
+        return view('pages.publik.umkm', compact('umkms'));
     }
 }

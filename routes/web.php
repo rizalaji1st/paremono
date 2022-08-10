@@ -12,7 +12,8 @@ use App\Http\Controllers\{
     ManajemenKategoriController,
     ManajemenArtikelController,
     ManajemenGaleriController,
-    HomeController
+    HomeController,
+    ManajemenUmkmController
 };
 
 /*
@@ -34,6 +35,7 @@ Route::name('home.')->group(function(){
     Route::get('/tentang', [HomeController::class, 'tentang'])->name('tentang');
     Route::post('/tentang/masukan', [HomeController::class, 'tentangMasukan'])->name('tentangMasukan');
     Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
+    Route::get('/umkm', [HomeController::class, 'umkm'])->name('umkm');
 });
 
 Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(function () {
@@ -71,6 +73,16 @@ Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(f
         Route::get('/edit/{blog}',[ManajemenArtikelController::class,'edit'])->name('edit');
         Route::post('/update/{blog}',[ManajemenArtikelController::class,'update'])->name('update');
         Route::post('/destroy/{blog}',[ManajemenArtikelController::class,'destroy'])->name('destroy');
+    });
+    Route::prefix('manajemen-umkm')->name('manajemen-umkm.')->group(function(){
+        Route::get('/',[ManajemenUmkmController::class,'index'])->name('index');
+        Route::get('/create',[ManajemenUmkmController::class,'create'])->name('create');
+        Route::post('/store',[ManajemenUmkmController::class,'store'])->name('store');
+        Route::post('/store-galeri',[ManajemenUmkmController::class,'storeGaleri'])->name('store-galeri');
+        Route::get('/edit/{umkm}',[ManajemenUmkmController::class,'edit'])->name('edit');
+        Route::post('/update/{umkm}',[ManajemenUmkmController::class,'update'])->name('update');
+        Route::post('/destroy/{umkm}',[ManajemenUmkmController::class,'destroy'])->name('destroy');
+        Route::post('/destroy-galeri/{umkmGaleri}',[ManajemenUmkmController::class,'destroyGaleri'])->name('destroy-galeri');
     });
     Route::prefix('manajemen-galeri')->name('manajemen-galeri.')->group(function(){
         Route::get('/',[ManajemenGaleriController::class,'index'])->name('index');

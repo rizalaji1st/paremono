@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Umkm extends Model
+class Masukan extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['path_foto','title','nama_pemilik','alamat','isi','ringkasan','wa','phone'];
+    protected $fillable = ['nama','email','subject','message'];
 }
