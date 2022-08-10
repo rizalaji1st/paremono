@@ -6,8 +6,8 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Desa Paremono @yield('title')</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Website Desa Paremono, Kecamatan Mungkid, Kabupaten Magelang, Provinsi Jawa Tengah. Website yang berisi informasi seputar desa paremono mulai dari berita penting, kegiatan masyarakat, galeri, hingga umkm. Paremono termasuk kedalam penghasil peyek petho terbesar" name="description">
+  <meta content="desa paremono, peyek petho, mungkid, magelang, smart village, kyai ageng karotangan" name="keywords">
 
   @include('layouts.guest.style')
 </head>
