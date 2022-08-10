@@ -166,7 +166,7 @@
                                     </label>
                                     <!--end::Label-->
                                     <!--begin::Input-->
-                                    <input class="form-control form-control-solid" placeholder="Enter the key" name="key"/>
+                                    <input class="form-control form-control-solid" placeholder="Enter the key" name="key" value="galeri_home_"/>
                                     <!--end::Input-->
                                 </div>
                                 <!--begin::Input group-->
