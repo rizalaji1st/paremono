@@ -10,4 +10,8 @@ class Umkm extends Model
     use HasFactory;
 
     protected $fillable = ['path_foto','title','nama_pemilik','alamat','isi','ringkasan','wa','phone'];
+
+    public function galeris(){
+        return $this->hasMany(UmkmGaleri::class, 'umkms_id','id');
+    }
 }

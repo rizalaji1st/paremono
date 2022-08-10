@@ -27,7 +27,7 @@
             <div class="col-xl-4 col-md-6">
               <div class="post-item position-relative h-100">
 
-                <div class="post-img position-relative overflow-hidden">
+                <div class="post-img position-relative overflow-hidden"  style="max-height: 250px">
                   <img src="{{ Storage::temporaryUrl($blog->path_foto, now()->addMinutes(5))}}" class="img-fluid" alt="">
                   <span class="post-date">{{$blog->tanggal->isoFormat('dddd, D MMMM Y')}}</span>
                 </div>

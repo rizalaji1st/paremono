@@ -36,6 +36,7 @@ Route::name('home.')->group(function(){
     Route::post('/tentang/masukan', [HomeController::class, 'tentangMasukan'])->name('tentangMasukan');
     Route::get('/galeri', [HomeController::class, 'galeri'])->name('galeri');
     Route::get('/umkm', [HomeController::class, 'umkm'])->name('umkm');
+    Route::get('/umkm/{umkm}', [HomeController::class, 'umkmDetail'])->name('umkmDetail');
 });
 
 Route::middleware('can:administrator')->prefix('admin')->name('admin.')->group(function () {

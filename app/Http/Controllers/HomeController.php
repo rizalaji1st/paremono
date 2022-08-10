@@ -89,4 +89,7 @@ class HomeController extends Controller
         $umkms = Umkm::get();
         return view('pages.publik.umkm', compact('umkms'));
     }
+    public function umkmDetail(Umkm $umkm){
+        return view('pages.publik.umkm-detail', compact('umkm'));
+    }
 }
