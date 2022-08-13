@@ -13,7 +13,8 @@ use App\Http\Controllers\{
     ManajemenArtikelController,
     ManajemenGaleriController,
     HomeController,
-    ManajemenUmkmController
+    ManajemenUmkmController,
+    SitemapXmlController
 };
 
 /*
@@ -26,6 +27,9 @@ use App\Http\Controllers\{
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
+Route::get('/sitemap-artikel.xml', [SitemapXmlController::class, 'artikel']);
 
 Route::name('home.')->group(function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');
