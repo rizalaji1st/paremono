@@ -3,6 +3,9 @@
 @section('home_active','active')
 
 @section('content')
+  @foreach ($galeri_homes as $galeri)
+    @if($loop->first) <meta name="thumbnail" content="{{ Storage::temporaryUrl($galeri->value, now()->addMinutes(5))}}" /> @endif
+  @endforeach
   
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="hero">

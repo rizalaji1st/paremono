@@ -30,6 +30,7 @@ use App\Http\Controllers\{
 
 Route::get('/sitemap.xml', [SitemapXmlController::class, 'index']);
 Route::get('/sitemap-artikel.xml', [SitemapXmlController::class, 'artikel']);
+Route::get('/sitemap-umkm.xml', [SitemapXmlController::class, 'umkm']);
 
 Route::name('home.')->group(function(){
     Route::get('/', [HomeController::class, 'index'])->name('home');

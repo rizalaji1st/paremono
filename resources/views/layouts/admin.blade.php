@@ -36,7 +36,7 @@
 					<!--begin::Brand-->
 					<div class="aside-logo flex-column-auto" id="kt_aside_logo">
 						<!--begin::Logo-->
-						<a href="../../demo1/dist/index.html">
+						<a href="{{url('/')}}">
 							<img alt="Logo" src="{{ asset('paremono/logo/logo-light.png')}}" class="h-30px logo" />
 						</a>
 						<!--end::Logo-->
@@ -244,7 +244,7 @@
 							<!--end::Aside mobile toggle-->
 							<!--begin::Mobile logo-->
 							<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
-								<a href="../../demo1/dist/index.html" class="d-lg-none">
+								<a href="{{url('/')}}" class="d-lg-none">
 									<img alt="Logo" src="{{ asset('paremono/logo/logo.png')}}" class="h-40px" />
 								</a>
 							</div>

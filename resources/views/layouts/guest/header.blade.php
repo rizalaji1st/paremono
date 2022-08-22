@@ -3,7 +3,7 @@
   <header id="header" class="header d-flex align-items-center">
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="{{url('/')}}" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="{{ asset('paremono/logo/logo.png')}}" alt="">
         <h1>Desa Paremono</h1>
@@ -23,7 +23,6 @@
           </li>
           <li><a href="{{url('/galeri')}}" class="@yield('galeri_active')">Galeri</a></li>
           <li><a href="{{url('/umkm')}}" class="@yield('umkm_active')">UMKM</a></li>
-          <li><a href="{{url('/kontak')}}" class="@yield('kontak_active')">Kontak Penting</a></li>
           <li><a href="{{url('/tentang')}}" class="@yield('tentang_active')">Tentang</a></li>
         </ul>
       </nav><!-- .navbar -->
